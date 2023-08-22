@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tutorial;
+
+message Location {
+  double lat = 1;
+  double long = 2;
+  float alt = 3;
+}
+
+message RoutePoint {
+  Location location = 1;
+  float speed = 2;
+}
+
+message RouteArray {
+  repeated RoutePoint waypoints = 1;
+}
